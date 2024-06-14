@@ -1,0 +1,86 @@
+---
+format: html
+editor: visual
+---
+
+[Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
+
+## Using LLMs to create a website
+
+LLMs can write code. One case where it is possible to use this ability without having ever learnt to code is for creating a website. You can provide information that the website needs to contain and subsequently ask to generate all code needed: to adjust the look, to add interactive elements, and so on. In this example we will assume that you don't know anything about creating a website and try to show how it can be done with an LLM.
+
+We will use the Facility Forum event as an example of what you want the website to be about.
+
+### Creating a simple website
+
+We prepared a file that contains all information about the Facility Forum. You can [download this Word file here](https://blobserver.dc.scilifelab.se/blob/facility_forum_info.docx). This word file contains a copy of the information that was provided to everyone by the organisers.
+
+Some tools allow upload of files whereas others do not. For example, paid version of Microsoft Copilot and ChatGPT allow to upload file whereas free versions (for example free ChatGPT) often do not allow file upload. You can upload this file into the LLM or you can insert this information into the chat window if you do not have an opportunity to upload.
+
+> ☝️ **TIP**: In case you run into a limit on the character length or number of lines that you can submit through the chat it is possible to tell the LLM that you will upload data in chunks and ask it to combine them into a single dataset.
+
+You can ask for a simple website to start with and improve from there asking the LLM to generate more complex visuals or interactive elements each time. This way it is easier to ask for changes and explain what you would like to see in each case.
+
+> ☝️ **TIP**: When it comes to writing code it is often useful to not ask for everything in one go but to build it iteratively, step-by-step, each time checking the output.
+
+You can start with something like this:
+
+```{R}
+# This is a Word file with information about an event. Create code for a single page website about this event. Include all information that is provided in the Word file on the website.
+```
+
+When you get the HTML code you need to copy it into any text editor. For example, all Macs computers come with *TextEdit* and all Windows computers come with *Notepad*. Save this file with an *\*.html* extension; for example name it *website.html* and open using any web browser. You will now see what the LLM generated. You repeat this every time new code is generated to check the results.
+
+Here you can see the page I had at this stage: [facility_forum_website_1.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_1.html)
+
+### Adding interactive elements
+
+Of course each website needs some interactive elements. For example we might want to have a menu on top of the page.
+
+```{R}
+# Add a menu on top of the page that will take the users to the corresponding sections of the page.
+```
+
+LLMs are quite good at writing code for websites so we can ask for more advanced interactive elements. In principle, you can try anything you can describe reasonably well. Here is a simple example.
+
+Here you can see the page I had at this stage: [facility_forum_website_2.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_2.html)
+
+```{R}
+# Add a new section at the end with a quiz about the event. The quiz contains three multiple choice questions about the event. When the visitor clicks on an answer they see feedback on whether their answer was correct.
+```
+
+> ☝️ **TIP**: Think about what kind of description you would need to provide to a colleague that is making a website for you, provide that same information to the LLM.
+
+Here you can see the page I had at this stage: [facility_forum_website_3.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_3.html)
+
+### Improving the look
+
+We can be as specific or as general as we want. For example, we can ask to follow a brand guide to add colors or we can say which exact colors should be used for which elements. SciLifeLab has brand guidelines so we can copy the text from those guidelines into the LLM chat window and let the LLM make the decisions of how to apply it.
+
+```{R}
+# Add custom styling to this webpage. Use the following information to add colors and fonts:
+
+# Brand colors
+# SciLifeLab's brand colors are Lime, Teal, Aqua and Grape. Lime is the main color, and the other colors can be combined freely with it (however, Grape should be used modestly as a 'color pop' or on smaller details). The 100 % tints are the main shades to use, but there are also lighter tints in 25, 50 and 75 %. These tints are equivalent to opacity of 25, 50 and 75 % which can be used as well.
+
+# Complementary colors
+#White, black and gray can be used freely. There are three suggested gray shades but any shades of black 5-90 % can be used.
+
+# SciLifeLab's typefaces are:
+# Lato
+# Lora
+
+# Color codes are:
+# Lime: #A7C947
+# Aqua: #4C979F
+# Teal: #045C64
+# Grape: #491F53
+```
+
+> ☝️ **TIP**: In this case we know what font and colors we want to use so we provide those. But we could have also asked the LLM to generate a style guide for us based on some description or mood or aesthetic and so on.
+
+Here you can see the page I had at this stage: [facility_forum_website_4.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_4.html)
+
+### 💪 *ADVANCED* Hosting the website
+
+Once you generate your website code the next step is to host it. This is something that the LLM cannot do for you but it possible to ask an LLM to provide guidance in this process as well. It is likely to be especially useful to those who are new to website hosting since it can answer beginner questions and provide detailed instructions.

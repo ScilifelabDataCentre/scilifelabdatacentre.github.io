@@ -1,0 +1,42 @@
+---
+format: html
+editor: visual
+---
+
+[Exercises](index.html) /
+
+## Exercise session 1
+
+Below is a list of ways in which you can try out text generation with LLMs. You can choose any LLM you wish to work with. Read our suggestions/examples but also experiment yourself and let us know what you learnt 🙂.
+
+### Try out text generation on your own as you wish
+
+If you never tried an LLM this is your time! ...
+
+### Try text generation with citations
+
+Try out [Perplexity](https://www.perplexity.ai/), another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.
+
+### Try an LLM fine-tuned with specific knowledge
+
+LLMs can be reasonably good at general knowledge collected from the internet but in some cases you might want it to focus on more specific documents or knowledge or add some knowledge and documents to what it already knows. This is possible with the so-called Retrieval-Augmented Generation aka RAG. Roughly, one creates a RAG by providing additional information to an LLM.
+
+We prepared a tool for you in which you can try out.....
+
+### Chat about a document
+
+-   Upload a document and ask questions about it: use Microsoft Copilot or <https://www.chatpdf.com/> \[responsible for preparation: Arnold\]
+
+    -   Ask questions about a research paper
+
+    -   Ask to write an abstract/short summary
+
+### Chat about a webpage
+
+We created a tool that...
+
+### Try LLM for language correction and language tutor
+
+Help with correcting mistakes in a text in a foreign language and help with language learning (Swedish as an example)
+
+### 

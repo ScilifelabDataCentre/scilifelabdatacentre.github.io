@@ -1,0 +1,20 @@
+---
+format: html
+editor: visual
+---
+
+[Exercises](index.html) /
+
+## Exercise session 2
+
+In this round of exercises you can choose various use cases/applications of LLMs to try out. Select what you think is most fun below.
+
+### Writing a text document from bullet points -\>
+
+### Preparing a PowerPoint presentation -\>
+
+### [LLM as a data analysis assistant -\>](data_analysis.html)
+
+### [Using LLMs to create a website -\>](website.html)
+
+### Make a browser-based game -\>

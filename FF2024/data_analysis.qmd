@@ -1,0 +1,96 @@
+---
+format: html
+editor: visual
+---
+
+[Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
+
+## LLM as a data analysis assistant
+
+LLMs are able to analyse and provide answers based on tabular data. Some tools allow to upload a file (for example, in .txt, .csv, or excel format); in other cases we can insert the dataset as is into the chat window, and this will work reasonably well.
+
+Once the data is uploaded, it is possible to ask general questions about the dataset, ask for numbers that can be found directly in some cell, questions that require manipulation and combination of data, ask for data visualisation, and in case you want something to work with further it is possible to ask for a reformatted dataset that you can copy and save into a file or to generate code to analyse or visualize the dataset.
+
+Below are suggestions for some of the interactions that you can have with an LLM using an example dataset. We will use the dataset on population of Sweden between 1749 and 2023 provided by Statistics Sweden (Statistiska centralbyrån*)*.
+
+### Loading the dataset
+
+As mentioned, some tools allow upload of files whereas others do not. For example, paid version of Microsoft Copilot and ChatGPT allow to upload file whereas free versions (for example free ChatGPT) often do not allow file upload. In case file upload is not allowed, you can simply select the text of the dataset on the webpage, copy it, and paste the data into the chat window. The spaces or other delimiters should be interpreted correctly by the LLMs in most cases.
+
+> ☝️ **TIP**: In case you run into a limit on the character length or number of lines that you can submit through the chat it is possible to tell the LLM that you will upload data in chunks and ask it to combine them into a single dataset.
+
+In our case you can either [copy the dataset from the webpage](https://www.scb.se/en/finding-statistics/statistics-by-subject-area/population/population-composition/population-statistics/pong/tables-and-graphs/population-statistics---summary/population-and-population-changes/) or [download the Excel file](https://blobserver.dc.scilifelab.se/blob/population_dataset_scb.xlsx). Once the dataset is loaded into the memory you will typically get a general summary of what the dataset contains by the LLM.
+
+> ☝️ **TIP**: Labels/natural language in your dataset may be in another language (e.g. in Swedish). LLMs will translate the words into English and allow you to work with it in English.
+
+> ☝️ **TIP**: While typically in data analysis we work with exact variable names LLMs will "interpret" the meaning of the words that are used as variable names so it is possible to ask questions using synonyms or in rephrased way. For example, while "Live Births" is the variable name we can phrase questions like "how many children were born" because LLM will relate that to "Live Births".
+
+### Asking general questions
+
+Now that the dataset is in LLMs memory we can ask different kinds of questions. Below are some examples of questions about the dataset or questions asking for the specific value from the dataset.
+
+```{R}
+# For how many years do we have data on divorces?
+```
+
+```{R}
+# How many divorces were registered in 1984?
+```
+
+```{R}
+# How many people emigrated in 2023?
+```
+
+```{R}
+# Find the year with the fewest deaths
+```
+
+### Asking questions that require calculations based on the provided data
+
+Sometimes the answer we are looking for is not directly in the data that we have. In these cases we can ask the LLMs to do those calculations.
+
+```{R}
+# When will the population reach 11 million people?
+```
+
+```{R}
+# Calculate whether a higher proportion of the population marry now than 30 years ago
+```
+
+### Creating plots
+
+We can also ask LLMs to create some plots to look at the data visually. It is possible to ask for a plot that will be displayed directly in the chat or alternatively for example R or Python code for a visualisation (see below under ADVANCED topics). Here is an example prompt.
+
+```{R}
+# Show me a bar plot of population growth over years. Plot population growth in terms percentage change from the previous year.
+```
+
+> ☝️ **TIP**: One cool use case of LLMs is uploading an image of a plot and asking it to generate the same plot with your own data.
+
+### 💪 *ADVANCED* Generating code for plots and dashboards
+
+Another way to approach visualisation is asking LLM tools to generate code for creating a visualisation. This will require to already have at least some beginner-level knowledge of some relatively popular (only in those cases will LLMs have seen enough data to help us) coding tool for making visualizations. For example, *ggplot2* in R or *Plotly* in Python.
+
+For example, we can ask the following:
+
+```{R}
+# Write code to produce a line plot in R that will show the population growth over the last 10 years.
+```
+
+While the generated code will be generally correct and in some cases work immediately sometimes you will need to take a look and make corrections.
+
+If we want to go even further in this process and create an interactive dashboard instead of a static plot, we can also try to ask for that.
+
+```{R}
+# Now turn this plot into an interactive dashboard where the user can select any of the columns to replace the data in the Y axis.
+```
+
+> ☝️ **TIP**: When it comes to writing code it is often useful to not ask for everything in one go but to build the complex function or visualization as in this case step-by-step.
+
+> ☝️ **TIP**: If you already know how to best achieve the result, for example what packages and frameworks to use (in this example I know that Shiny is best to be used) tell the LLM tool to use those packages and frameworks for better result.
+
+In this case the LLM is probably going to generate code for an R Shiny dashboard. Again, it may not work immediately but might will give a good starting point. Already knowing how to build an R Shiny dashboard is useful here because it allows to spot and correct the errors. We can fix the errors ourselves or ask the LLM to correct them, for example. as shown in the following prompt.
+
+```{R}
+# When I select columns containing a space in the column names I see an error message. Correct the code to avoid this error.
+```

@@ -1,0 +1,30 @@
+---
+title: "Hands-on with Large Language Models: Exercises"
+format: html
+editor: visual
+---
+
+Welcome to the exercises for the workshop "Hands-on with Large Language Models". Select the exercise session and you will see further guiding on the following page. Questions? Ask us!
+
+## Preparation
+
+You need to have access to a Large Language Model (LLM) tool to do the exercises. If you never tried an LLM this is your time! Head to Microsoft Copilot if your university provides that, below we collected details for each university. Otherwise feel free to use any other LLM tool, for example [ChatGPT](https://chat.openai.com/) (OpenAI, USA) or [Mistral Le Chat](https://mistral.ai/) (French company).
+
+Select your university for instructions on how to access Microsoft Copilot:
+
+-   Chalmers University of Technology: [Instructions for access to Microsoft Copilot](https://guides.lib.chalmers.se/sokaochutvarderainformation/EN/ai)
+-   Karolinska Institute: [Instructions for access to Microsoft Copilot](https://medarbetare.ki.se/ai-for-anstallda-microsoft-copilot)
+-   KTH Royal Institute of Technology: no LLM available, use ChatGPT, Mistral or another.
+-   Linköping University: [Instructions for access to Microsoft Copilot](https://liu.se/nyhet/liu-far-copilot)
+-   Lund University: [Instructions for access to Microsoft Copilot](https://www.medarbetarwebben.lu.se/artikel/alla-medarbetare-kan-nu-anvanda-ai-assistenten-copilot-tidigare-bing-chat-utan-kostnad)
+-   Stockholm University: no LLM available, use ChatGPT, Mistral or another.
+-   Swedish University of Agricultural Sciences: no LLM available, use ChatGPT, Mistral or another.
+-   Umeå University: [Instructions for access to Microsoft Copilot](https://manual.its.umu.se/sa-anvander-du-den-ai-drivna-chatten-bing/)
+-   University of Gothenburg: [Instructions for access to Microsoft Copilot](https://studentportal.gu.se/nyheter/nu-kan-du-logga-in-med-studentkontot-for-att-anvanda-copilot-med-bing)
+-   Uppsala University: [Instructions for access to Microsoft Copilot](https://www.uu.se/medarbetare/stod-och-verktyg/it/ai-tjanster)
+
+## Exercises
+
+### [Exercise session 1 -\>](exercise_session_1.html)
+
+### [Exercise session 2 -\>](exercise_session_2.html)
