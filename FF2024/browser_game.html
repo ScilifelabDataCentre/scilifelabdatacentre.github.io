@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>browser game</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="website_files/libs/clipboard/clipboard.min.js"></script>
+<script src="website_files/libs/quarto-html/quarto.js"></script>
+<script src="website_files/libs/quarto-html/popper.min.js"></script>
+<script src="website_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="website_files/libs/quarto-html/anchor.min.js"></script>
+<link href="website_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="website_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="website_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="website_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="website_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<p><a href="index.html">Exercises</a> / <a href="exercise_session_2.html">Exercise session 2</a> /</p>
+<section id="using-llms-to-create-a-browser-game" class="level2">
+<h2 class="anchored" data-anchor-id="using-llms-to-create-a-browser-game">Using LLMs to create a browser game</h2>
+<p>This is another example of using LLMs to generate code. We will try to create a simple browser based html game and add some game elements to see how the LLM can help us create the game. The aim of the exercise is not to recreate the same thing as the LLM generates different code on separate interactions and neither to use the LLM in an "efficient" way by following prompt best practices but just to give an overview of what it can understand and do. In this instance we will create a game of Tic Tac Toe and build on top of it but you can try it with other simple games as well. At the end of the page you will find a link with the whole interartion we had with the LLM, all the prompts and resulting code, so you can look at that later as well.</p>
+
+<section id="creating-a-simple-browser-game" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-simple-browser-game">Creating a simple browser game</h3>
+<p>We will begin by asking the LLM if it can genrate an HTML game for us and try to be more specific in the following prompts to improve the game.</p>
+
+<p>As with the exercise on websites, you can ask for a simple game to start with and improve from there asking the LLM to generate more complex visuals or interactive elements each time. This way it is easier to ask for changes and explain what you would like to see in each case.</p>
+<blockquote class="blockquote">
+<p>☝️ <strong>TIP</strong>: When it comes to writing code it is often useful to not ask for everything in one go but to build it iteratively, step-by-step, each time checking the output.</p>
+</blockquote>
+<p>You can start with the following prompt:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can you help me develop an html game based on tic tac toe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will generate the code for you and the LLM might give instructions as well on how to setup this code. It usually generates 3 different code files for you. These are the html file called <em>index.html</em>, the css file called <em>styles.css</em> and the javascript file called <em>script.js</em>. You will need to manually create files with these names on you computer and save them in the same directory. Then you can copy the code for each file into the corresponding file locally and save the file. Make sure you have the file names and extensions set up correctly. When this is done you can open the <em>index.html</em> file in a browser and you should be able to see the game created by the LLM. You will need to repeat this process every time new code is generated to check the results.</p>
+<p>The first prompt created the code for the game and after following the setup steps mentioned in the paragraph above the resulting game looked like this: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_1.png">facility_forum_browser_game_1.html</a></p>
+</section>
+<section id="adding-interactive-elements" class="level3">
+<h3 class="anchored" data-anchor-id="adding-interactive-elements">Adding complex elements</h3>
+<p>Now that there is a structure for a basic game of tic tac toe, we can try to add more complex elements such as an AI player and multiple difficulty levels. To add an AI opponent to the game you can prompt</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can we add an ai opponent to the game that moves automatically on its turn.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>LLMs are becoming increasingly good at writing code for websites so we can ask for more advanced elements. In principle, you can try anything you can describe reasonably well.</p>
+<blockquote class="blockquote">
+  <p>☝️ <strong>TIP</strong>: The LLMs can also suggest changes to the game. For example in this case the LLM suggested the following:</p>
+    
+  <p>This sets up a basic Tic Tac Toe game. You can enhance it further by adding more features like a score counter, animations, or different themes. Let me know if you'd like to add any specific features or improve certain aspects of the game!</p>
+</blockquote>
+<p>The LLM creates a new player that makes moves on their turn. You can now ask it to create multiple difficulty levels with a prompt like this</p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can we make multiple levels of difficulty with the AI player. The first level is easy and ai moves randomly. The second level is the current ai player.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </div>
+<p>At this stage, the game still used basic ui elements but now had a difficulty setting in the interface: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_2.png">facility_forum_borwser_game_2.png</a></p>
+<blockquote class="blockquote">
+<p>☝️ <strong>TIP</strong>: Think about what kind of description you would need to provide to a colleague that is making a website for you, provide that same information to the LLM.</p>
+</blockquote>
+<section id="improving-the-look" class="level3">
+<h3 class="anchored" data-anchor-id="improving-the-look">Improving the look</h3>
+<p>To improve the look of the game we can use libraries such as Bootstrap to make ít look more appealing. We can be as specific or as general as we want. I will be a bit general and ask it to use bootstrap to with a prompt like this</p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can you improve it visually by adding more colors and use bootstrap to make this look better. Can you also move the tic tac toe grid to the centre and create a popup for the winner. Add a scoreboard as well.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, the game used UI elements from bootstrap and looked visually "better": <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_4.png">facility_forum_borwser_game_3.png</a></p>
+<p>To make it slightly more relevant we can ask the LLM to change the theme with a prompt like this</p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the theme to life science and use information on this page for color scheme https://www.scilifelab.se/community-pages/resources/visual-identity/.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>☝️ <strong>TIP</strong>: In this case we have asked the LLM to look at the Scilifelab website visual identity page and use those color themes in the game. We can be more specific about the colors and what elements hosuld have these colors but in this case its interesting to see the variation there is when we allow the LLM some "artistic freedom".</p>
+</blockquote>
+<p>After incorporating the Scilifelab theme, and adding images the interface looked like this: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_5.png">facility_forum_borwser_game_4.png</a></p>
+
+<p>The LLM changed the players from X and O to images for cell and DNA. It does say in the instructions to add these images manually so you can download any image that you like for each player and name it accorindg to the instructions by the LLM. In this case it used two images named <em>cell.png</em> and <em>dna.png</em>.</p>
+
+<p>To wrap up we added used prompts to make UI improvements. Some of them were </p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a border for the main game board and shift scoreboard and difficulty to a side menu on the left.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The heading should have the look of a navbar.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the content in the side menu fit better and give the scoredboard a separate border and scilifelab visual background.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<p>This was the final result: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_6.png">facility_forum_borwser_game_5.png</a></p>
+
+</section>
+<section id="advanced-hosting-the-website" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-hosting-the-website">Hosting the website</h3>
+<p>After the code in generated you can ask the LLM if it can host the website. It can't do that but it can give you suggestions. I asked it if if could deploy the app to a service called netlify</p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can you deploy this to netlify?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<p>The LLM gave useful information on how this can be done.</p>
+
+<blockquote class="blockquote">
+  <p>To deploy this Tic Tac Toe game to Netlify, follow these steps:</p>
+<ol>
+<li><p><strong>Prepare Your Project:</strong> Ensure you have the following files in your project directory:</p>
+<ul>
+<li><code>index.html</code></li>
+<li><code>styles.css</code></li>
+<li><code>script.js</code></li>
+<li>Any additional assets like images for &#39;X&#39; and &#39;O&#39;.</li>
+</ul>
+</li>
+<li><p><strong>Create a Git Repository:</strong> Initialize a git repository and commit your files:</p>
+<pre><code class="lang-bash">git init
+git <span class="hljs-keyword">add</span><span class="bash"> .
+</span>git commit -m <span class="hljs-string">"Initial commit"</span>
+</code></pre>
+</li>
+<li><p><strong>Push to GitHub:</strong> Create a new repository on GitHub and push your local repository to GitHub:</p>
+<pre><code class="lang-bash">git remote <span class="hljs-keyword">add</span> origin https:<span class="hljs-comment">//github.com/yourusername/your-repo-name.git</span>
+git push -u origin master
+</code></pre>
+</li>
+<li><p><strong>Deploy to Netlify:</strong></p>
+<ul>
+<li>Log in to <a href="https://www.netlify.com/">Netlify</a>.</li>
+<li>Click on &quot;New site from Git&quot;.</li>
+<li>Connect your GitHub account and select the repository you created.</li>
+<li>Configure the deploy settings if necessary, then click &quot;Deploy site&quot;.</li>
+</ul>
+</li>
+<li><p><strong>Custom Domain (Optional):</strong></p>
+<ul>
+<li>After deployment, you can set up a custom domain if desired.</li>
+</ul>
+</li>
+</ol>
+<p>Following these steps will deploy your game to Netlify, making it accessible online. Let me know if you need further assistance with any step!</p>
+
+  </blockquote>
+
+</section>
+<section id="example-chat" class="level4">
+  <h3 class="anchored" data-anchor-id="example-chat">Example chat and prompts</h3>
+  <p>The whole chat with the LLM and all the prompts and responses can be seen at <a href="https://blobserver.dc.scilifelab.se/blob/chatgpt_browser_game.md">chatgpt_browser_game.md</a></p>
+  
+  </section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
