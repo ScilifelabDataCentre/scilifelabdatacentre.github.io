@@ -115,13 +115,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
   <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can we make multiple levels of difficulty with the AI player. The first level is easy and ai moves randomly. The second level is the current ai player.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
   </div>
-<p>At this stage, the game still used basic ui elements but now had a difficulty setting in the interface: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_2.png">facility_forum_borwser_game_2.png</a></p>
+<p>At this stage, the game still used basic UI elements but now had a difficulty setting in the interface: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_2.png">facility_forum_borwser_game_2.png</a></p>
 <blockquote class="blockquote">
 <p>☝️ <strong>TIP</strong>: Think about what kind of description you would need to provide to a colleague that is making a website or game for you, provide that same information to the LLM.</p>
 </blockquote>
 <section id="improving-the-look" class="level3">
 <h3 class="anchored" data-anchor-id="improving-the-look">Improving the look</h3>
-<p>To improve the look of the game we can use libraries such as Bootstrap to make ít look more appealing. We can be as specific or as general as we want. I will be a bit general and ask it to use bootstrap to with a prompt like this</p>
+<p>To improve the look of the game we can use libraries such as Bootstrap to make it look more appealing. We can be as specific or as general as we want. I will be a bit general and ask it to use bootstrap to with a prompt like this</p>
 <div class="cell">
   <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can you improve it visually by adding more colors and use bootstrap to make this look better. Can you also move the tic tac toe grid to the centre and create a popup for the winner. Add a scoreboard as well.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -131,11 +131,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the theme to life science and use information on this page for color scheme https://www.scilifelab.se/community-pages/resources/visual-identity/.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <blockquote class="blockquote">
-<p>☝️ <strong>TIP</strong>: In this case we have asked the LLM to look at the Scilifelab website visual identity page and use those color themes in the game. We can be more specific about the colors and what elements hosuld have these colors but in this case its interesting to see the variation there is when we allow the LLM some "artistic freedom".</p>
+<p>☝️ <strong>TIP</strong>: In this case we have asked the LLM to look at the Scilifelab website visual identity page and use those color themes in the game. We can be more specific about the colors and what elements should have these colors but in this case its interesting to see the variation there is when we allow the LLM some "artistic freedom".</p>
 </blockquote>
 <p>After incorporating the Scilifelab theme, and adding images the interface looked like this: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_5.png">facility_forum_borwser_game_4.png</a></p>
 
-<p>The LLM changed the players from X and O to images for cell and DNA. It does say in the instructions to add these images manually so you can download any image that you like for each player and name it accorindg to the instructions by the LLM. In this case it used two images named <em>cell.png</em> and <em>dna.png</em>.</p>
+<p>The LLM changed the players from X and O to images for cell and DNA. It does say in the instructions to add these images manually so you can download any image that you like for each player and name it according to the instructions by the LLM. In this case it used two images named <em>cell.png</em> and <em>dna.png</em>.</p>
 
 <p>To wrap up we added used prompts to make UI improvements. Some of them were </p>
 <div class="cell">
@@ -204,6 +204,7 @@ git push -u origin master
 <section id="example-chat" class="level4">
   <h3 class="anchored" data-anchor-id="example-chat">Example chat and prompts</h3>
   <p>The whole chat with the LLM and all the prompts and responses can be seen at <a href="https://github.com/ScilifelabDataCentre/scilifelabdatacentre.github.io/blob/main/FF2024/browser_game_files/chatgpt_browser_game.md">chatgpt_browser_game.md</a></p>
+  <p>If you look at the chat, it can be seen that there were sometimes small bugs either in the code logic or misplaced visual elements but and sometimes you had to ask the LLM to fix them but it was not able to do so. In those cases we had to manually look at problem areas i.e do some manual debugging and then ask the LLM to fix that area. For example, the LLM was having problems with the async nature of javascript and it set timeout for the player turns to make it visually better but that resulted in one player having multiple turns before the other. We had to manually look at the code and ask it to remove the timeouts in this case. There were similar problems with the placing UI elements as well.</p>
   
   </section>
 </section>
