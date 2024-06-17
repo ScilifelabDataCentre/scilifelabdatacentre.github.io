@@ -1,0 +1,16 @@
+---
+format: html
+editor: visual
+execute:
+  eval: false
+---
+
+[Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
+
+## SciLifeLab chat assistant
+
+LLMs can be reasonably good at general knowledge collected from the internet but in some cases you might want it to focus on more specific documents or knowledge or add some knowledge and documents to what it already knows. This is possible with the so-called Retrieval-Augmented Generation aka RAG. Roughly, one creates a RAG by providing additional information to an LLM.
+
+In order to allow you to test out a RAG we created such a tool for SciLifeLab. This tool is based on ChatGPT and in addition it learnt all the information that is published on https://www.scilifelab.se as well as public PDF documents about SciLifeLab (such as regulations, SciLifeLab board minutes, etc.).
+
+You can interact with this tool using the chat window that appears on bottom right of this page. You can imagine this as a chatbot that could be shown to the visitors of https://scilifelabs.se

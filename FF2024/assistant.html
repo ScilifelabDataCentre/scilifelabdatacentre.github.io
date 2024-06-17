@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>exercise_session_2</title>
+<title>assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="exercise_session_2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/quarto.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/popper.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/anchor.min.js"></script>
-<link href="exercise_session_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="exercise_session_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="exercise_session_2_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="exercise_session_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="exercise_session_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="assistant_files/libs/clipboard/clipboard.min.js"></script>
+<script src="assistant_files/libs/quarto-html/quarto.js"></script>
+<script src="assistant_files/libs/quarto-html/popper.min.js"></script>
+<script src="assistant_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="assistant_files/libs/quarto-html/anchor.min.js"></script>
+<link href="assistant_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="assistant_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="assistant_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="assistant_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="assistant_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -45,32 +45,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="index.html">Exercises</a> /</p>
-<section id="exercise-session-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-session-2">Exercise session 2</h2>
-<p>In this round of exercises you can choose various use cases/applications of LLMs to try out. Select what you think is most fun below.</p>
-<section id="writing-a-text-document-from-bullet-points--" class="level3">
-<h3 class="anchored" data-anchor-id="writing-a-text-document-from-bullet-points--">Writing a text document from bullet points -&gt;</h3>
-</section>
-<section id="preparing-a-powerpoint-presentation--" class="level3">
-<h3 class="anchored" data-anchor-id="preparing-a-powerpoint-presentation--">Preparing a PowerPoint presentation -&gt;</h3>
-</section>
-<section id="llm-as-a-data-analysis-assistant--" class="level3">
-<h3 class="anchored" data-anchor-id="llm-as-a-data-analysis-assistant--"><a href="data_analysis.html">LLM as a data analysis assistant -&gt;</a></h3>
-</section>
-<section id="using-llms-to-create-a-website--" class="level3">
-<h3 class="anchored" data-anchor-id="using-llms-to-create-a-website--"><a href="website.html">Using LLMs to create a website -&gt;</a></h3>
-</section>
-<section id="make-a-browser-based-game--" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-browser-based-game--"><a href="browser_game.html">Using LLMs to make a browser-based game -&gt;</a></h3>
-</section>
-<section id="scilifelab-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="scilifelab-assistant"><a href="assistant.html">SciLifeLab chat assistant -&gt;</a></h3>
-</section>
+<p><a href="index.html">Exercises</a> / <a href="exercise_session_2.html">Exercise session 2</a> /</p>
+<section id="scilifelab-chat-assistant" class="level2">
+<h2 class="anchored" data-anchor-id="scilifelab-chat-assistant">SciLifeLab chat assistant</h2>
+<p>LLMs can be reasonably good at general knowledge collected from the internet but in some cases you might want it to focus on more specific documents or knowledge or add some knowledge and documents to what it already knows. This is possible with the so-called Retrieval-Augmented Generation aka RAG. Roughly, one creates a RAG by providing additional information to an LLM.</p>
+<p>In order to allow you to test out a RAG we created such a tool for SciLifeLab. This tool is based on ChatGPT and in addition it learnt all the information that is published on https://www.scilifelab.se as well as public PDF documents about SciLifeLab (such as regulations, SciLifeLab board minutes, etc.).</p>
+<p>You can interact with this tool using the chat window that appears on bottom right of this page. You can imagine this as a chatbot that could be shown to the visitors of https://scilifelabs.se</p>
+<p>Try out this assistant and let us know your thoughts here. [[[LINK HERE]]]</p>
 </section>
 
 </main>
 <!-- /main column -->
+<script src="https://console.stage.centaura.ai/static/js/chat.js"></script>
+        <script>
+            window.onload = function () {
+                CentauraAI.init({
+                    assistant_id: "8c705e4c-7ebe-47c3-84a1-d163f2dda26c",
+                    channel_id: "0325f424-39e9-4994-a2a2-eef5cea7b259",
+                    base_url: "https://console.stage.centaura.ai/assistant/channels/",
+                });
+            };
+        </script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
