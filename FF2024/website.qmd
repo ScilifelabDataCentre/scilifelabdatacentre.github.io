@@ -1,6 +1,8 @@
 ---
 format: html
 editor: visual
+execute:
+  eval: false
 ---
 
 [Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
@@ -26,7 +28,7 @@ You can ask for a simple website to start with and improve from there asking the
 You can start with something like this:
 
 ```{R}
-# This is a Word file with information about an event. Create code for a single page website about this event. Include all information that is provided in the Word file on the website.
+This is a Word file with information about an event. Create code for a single page website about this event. Include all information that is provided in the Word file on the website.
 ```
 
 When you get the HTML code you need to copy it into any text editor. For example, all Macs computers come with *TextEdit* and all Windows computers come with *Notepad*. Save this file with an *\*.html* extension; for example name it *website.html* and open using any web browser. You will now see what the LLM generated. You repeat this every time new code is generated to check the results.
@@ -38,7 +40,7 @@ Here you can see the page I had at this stage: [facility_forum_website_1.html](h
 Of course each website needs some interactive elements. For example we might want to have a menu on top of the page.
 
 ```{R}
-# Add a menu on top of the page that will take the users to the corresponding sections of the page.
+Add a menu on top of the page that will take the users to the corresponding sections of the page.
 ```
 
 LLMs are quite good at writing code for websites so we can ask for more advanced interactive elements. In principle, you can try anything you can describe reasonably well. Here is a simple example.
@@ -46,7 +48,7 @@ LLMs are quite good at writing code for websites so we can ask for more advanced
 Here you can see the page I had at this stage: [facility_forum_website_2.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_2.html)
 
 ```{R}
-# Add a new section at the end with a quiz about the event. The quiz contains three multiple choice questions about the event. When the visitor clicks on an answer they see feedback on whether their answer was correct.
+Add a new section at the end with a quiz about the event. The quiz contains three multiple choice questions about the event. When the visitor clicks on an answer they see feedback on whether their answer was correct.
 ```
 
 > ☝️ **TIP**: Think about what kind of description you would need to provide to a colleague that is making a website for you, provide that same information to the LLM.
@@ -60,23 +62,23 @@ Here you can see the page I had at this stage: [facility_forum_website_3.html](h
 We can be as specific or as general as we want. For example, we can ask to follow a brand guide to add colors or we can say which exact colors should be used for which elements. SciLifeLab has brand guidelines so we can copy the text from those guidelines into the LLM chat window and let the LLM make the decisions of how to apply it.
 
 ```{R}
-# Add custom styling to this webpage. Use the following information to add colors and fonts:
+Add custom styling to this webpage. Use the following information to add colors and fonts:
 
-# Brand colors
-# SciLifeLab's brand colors are Lime, Teal, Aqua and Grape. Lime is the main color, and the other colors can be combined freely with it (however, Grape should be used modestly as a 'color pop' or on smaller details). The 100 % tints are the main shades to use, but there are also lighter tints in 25, 50 and 75 %. These tints are equivalent to opacity of 25, 50 and 75 % which can be used as well.
+Brand colors
+SciLifeLab's brand colors are Lime, Teal, Aqua and Grape. Lime is the main color, and the other colors can be combined freely with it (however, Grape should be used modestly as a 'color pop' or on smaller details). The 100 % tints are the main shades to use, but there are also lighter tints in 25, 50 and 75 %. These tints are equivalent to opacity of 25, 50 and 75 % which can be used as well.
 
-# Complementary colors
-#White, black and gray can be used freely. There are three suggested gray shades but any shades of black 5-90 % can be used.
+Complementary colors
+White, black and gray can be used freely. There are three suggested gray shades but any shades of black 5-90 % can be used.
 
-# SciLifeLab's typefaces are:
-# Lato
-# Lora
+SciLifeLab's typefaces are:
+Lato
+Lora
 
-# Color codes are:
-# Lime: #A7C947
-# Aqua: #4C979F
-# Teal: #045C64
-# Grape: #491F53
+Color codes are:
+Lime: #A7C947
+Aqua: #4C979F
+Teal: #045C64
+Grape: #491F53
 ```
 
 > ☝️ **TIP**: In this case we know what font and colors we want to use so we provide those. But we could have also asked the LLM to generate a style guide for us based on some description or mood or aesthetic and so on.

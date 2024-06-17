@@ -1,6 +1,8 @@
 ---
 format: html
 editor: visual
+execute:
+  eval: false
 ---
 
 [Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
@@ -30,19 +32,20 @@ In our case you can either [copy the dataset from the webpage](https://www.scb.s
 Now that the dataset is in LLMs memory we can ask different kinds of questions. Below are some examples of questions about the dataset or questions asking for the specific value from the dataset.
 
 ```{R}
-# For how many years do we have data on divorces?
+#| warning: false
+For how many years do we have data on divorces?
 ```
 
 ```{R}
-# How many divorces were registered in 1984?
+How many divorces were registered in 1984?
 ```
 
 ```{R}
-# How many people emigrated in 2023?
+How many people emigrated in 2023?
 ```
 
 ```{R}
-# Find the year with the fewest deaths
+Find the year with the fewest deaths
 ```
 
 ### Asking questions that require calculations based on the provided data
@@ -50,11 +53,11 @@ Now that the dataset is in LLMs memory we can ask different kinds of questions. 
 Sometimes the answer we are looking for is not directly in the data that we have. In these cases we can ask the LLMs to do those calculations.
 
 ```{R}
-# When will the population reach 11 million people?
+When will the population reach 11 million people?
 ```
 
 ```{R}
-# Calculate whether a higher proportion of the population marry now than 30 years ago
+Calculate whether a higher proportion of the population marry now than 30 years ago
 ```
 
 ### Creating plots
@@ -62,7 +65,7 @@ Sometimes the answer we are looking for is not directly in the data that we have
 We can also ask LLMs to create some plots to look at the data visually. It is possible to ask for a plot that will be displayed directly in the chat or alternatively for example R or Python code for a visualisation (see below under ADVANCED topics). Here is an example prompt.
 
 ```{R}
-# Show me a bar plot of population growth over years. Plot population growth in terms percentage change from the previous year.
+Show me a bar plot of population growth over years. Plot population growth in terms percentage change from the previous year.
 ```
 
 > ☝️ **TIP**: One cool use case of LLMs is uploading an image of a plot and asking it to generate the same plot with your own data.
@@ -74,7 +77,7 @@ Another way to approach visualisation is asking LLM tools to generate code for c
 For example, we can ask the following:
 
 ```{R}
-# Write code to produce a line plot in R that will show the population growth over the last 10 years.
+Write code to produce a line plot in R that will show the population growth over the last 10 years.
 ```
 
 While the generated code will be generally correct and in some cases work immediately sometimes you will need to take a look and make corrections.
@@ -82,7 +85,7 @@ While the generated code will be generally correct and in some cases work immedi
 If we want to go even further in this process and create an interactive dashboard instead of a static plot, we can also try to ask for that.
 
 ```{R}
-# Now turn this plot into an interactive dashboard where the user can select any of the columns to replace the data in the Y axis.
+Now turn this plot into an interactive dashboard where the user can select any of the columns to replace the data in the Y axis.
 ```
 
 > ☝️ **TIP**: When it comes to writing code it is often useful to not ask for everything in one go but to build the complex function or visualization as in this case step-by-step.
@@ -92,7 +95,7 @@ If we want to go even further in this process and create an interactive dashboar
 In this case the LLM is probably going to generate code for an R Shiny dashboard. Again, it may not work immediately but might will give a good starting point. Already knowing how to build an R Shiny dashboard is useful here because it allows to spot and correct the errors. We can fix the errors ourselves or ask the LLM to correct them, for example. as shown in the following prompt.
 
 ```{R}
-# When I select columns containing a space in the column names I see an error message. Correct the code to avoid this error.
+When I select columns containing a space in the column names I see an error message. Correct the code to avoid this error.
 ```
 
 ### 💪 Challenges

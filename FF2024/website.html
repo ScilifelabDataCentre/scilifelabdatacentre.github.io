@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>You can start with something like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a Word file with information about an event. Create code for a single page website about this event. Include all information that is provided in the Word file on the website.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>This is a Word file with information about an event. Create code <span class="cf">for</span> a single page website about this event. Include all information that is provided <span class="cf">in</span> the Word file on the website.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>When you get the HTML code you need to copy it into any text editor. For example, all Macs computers come with <em>TextEdit</em> and all Windows computers come with <em>Notepad</em>. Save this file with an <em>*.html</em> extension; for example name it <em>website.html</em> and open using any web browser. You will now see what the LLM generated. You repeat this every time new code is generated to check the results.</p>
 <p>Here you can see the page I had at this stage: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_website_1.html">facility_forum_website_1.html</a></p>
@@ -106,12 +106,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="adding-interactive-elements">Adding interactive elements</h3>
 <p>Of course each website needs some interactive elements. For example we might want to have a menu on top of the page.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a menu on top of the page that will take the users to the corresponding sections of the page.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Add a menu on top of the page that will take the users to the corresponding sections of the page.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>LLMs are quite good at writing code for websites so we can ask for more advanced interactive elements. In principle, you can try anything you can describe reasonably well. Here is a simple example.</p>
 <p>Here you can see the page I had at this stage: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_website_2.html">facility_forum_website_2.html</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new section at the end with a quiz about the event. The quiz contains three multiple choice questions about the event. When the visitor clicks on an answer they see feedback on whether their answer was correct.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Add a new section at the end with a quiz about the event. The quiz contains three multiple choice questions about the event. When the visitor clicks on an answer they see feedback on whether their answer was correct.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <blockquote class="blockquote">
 <p>☝️ <strong>TIP</strong>: Think about what kind of description you would need to provide to a colleague that is making a website for you, provide that same information to the LLM.</p>
@@ -125,40 +125,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="improving-the-look">Improving the look</h3>
 <p>We can be as specific or as general as we want. For example, we can ask to follow a brand guide to add colors or we can say which exact colors should be used for which elements. SciLifeLab has brand guidelines so we can copy the text from those guidelines into the LLM chat window and let the LLM make the decisions of how to apply it.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add custom styling to this webpage. Use the following information to add colors and fonts:</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Add custom styling to this webpage. Use the following information to add colors and fonts<span class="sc">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Brand colors</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># SciLifeLab's brand colors are Lime, Teal, Aqua and Grape. Lime is the main color, and the other colors can be combined freely with it (however, Grape should be used modestly as a 'color pop' or on smaller details). The 100 % tints are the main shades to use, but there are also lighter tints in 25, 50 and 75 %. These tints are equivalent to opacity of 25, 50 and 75 % which can be used as well.</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Brand colors</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>SciLifeLab<span class="st">'s brand colors are Lime, Teal, Aqua and Grape. Lime is the main color, and the other colors can be combined freely with it (however, Grape should be used modestly as a '</span>color pop<span class="st">' or on smaller details). The 100 % tints are the main shades to use, but there are also lighter tints in 25, 50 and 75 %. These tints are equivalent to opacity of 25, 50 and 75 % which can be used as well.</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Complementary colors</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#White, black and gray can be used freely. There are three suggested gray shades but any shades of black 5-90 % can be used.</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">Complementary colors</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">White, black and gray can be used freely. There are three suggested gray shades but any shades of black 5-90 % can be used.</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># SciLifeLab's typefaces are:</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Lato</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Lora</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">SciLifeLab'</span>s typefaces are<span class="sc">:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>Lato</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>Lora</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Color codes are:</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Lime: #A7C947</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Aqua: #4C979F</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Teal: #045C64</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Grape: #491F53</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>Color codes are<span class="sc">:</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>Lime<span class="sc">:</span> <span class="co">#A7C947</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>Aqua<span class="sc">:</span> <span class="co">#4C979F</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>Teal<span class="sc">:</span> <span class="co">#045C64</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>Grape<span class="sc">:</span> <span class="co">#491F53</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <blockquote class="blockquote">
 <p>☝️ <strong>TIP</strong>: In this case we know what font and colors we want to use so we provide those. But we could have also asked the LLM to generate a style guide for us based on some description or mood or aesthetic and so on.</p>
 </blockquote>
 <p>Here you can see the page I had at this stage: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_website_4.html">facility_forum_website_4.html</a></p>
 </section>
-<section id="advanced-hosting-the-website" class="level3">
-<h3 class="anchored" data-anchor-id="advanced-hosting-the-website">💪 <em>ADVANCED</em> Hosting the website</h3>
-<p>Once you generate your website code the next step is to host it. This is something that the LLM cannot do for you but it possible to ask an LLM to provide guidance in this process as well. It is likely to be especially useful to those who are new to website hosting since it can answer beginner questions and provide detailed instructions.</p>
-</section>
-<section id="other-use-cases" class="level3">
-<h3 class="anchored" data-anchor-id="other-use-cases">Other use cases</h3>
-<p>Here are some other interesting types of websites you might want to try to create using LLMs.</p>
+<section id="challenges" class="level3">
+<h3 class="anchored" data-anchor-id="challenges">💪 Challenges</h3>
+<p>Here are some other interesting types of websites you might want to try to create using LLMs:</p>
 <ol type="1">
 <li>Create a web page that asks for weight (kg) and height (cm) of a person and calculates BMI.</li>
 <li>Create a web page that asks for the radius of a sphere and calculates the volume.</li>
 </ol>
+</section>
+<section id="advanced-hosting-the-website" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-hosting-the-website">🧙‍♂️🧙‍♀️<em>ADVANCED</em> Hosting the website</h3>
+<p>Once you generate your website code the next step is to host it. This is something that the LLM cannot do for you but it possible to ask an LLM to provide guidance in this process as well. It is likely to be especially useful to those who are new to website hosting since it can answer beginner questions and provide detailed instructions.</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
 </section>
 </section>
 
