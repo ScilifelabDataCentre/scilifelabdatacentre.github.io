@@ -81,51 +81,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><a href="index.html">Exercises</a> / <a href="exercise_session_1.html">Exercise session 1</a> /</p>
 <section id="using-llms-to-create-an-email" class="level2">
-<h2 class="anchored" data-anchor-id="using-llms-to-create-an-email">Using LLMs to write emails</h2>
-<p>LLMs can help you write emails quickly and take on additional information to change the tone, length and translate the emails.</p>
-<p>Here are some things that you can try out using the LLM you have access to.</p>
-<section id="creating-a-simple-email" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-simple-email">Writing an email</h3>
-<p>To create an email you can give a simple prompt to the LLM. For example</p>
+<h2 class="anchored" data-anchor-id="using-llms-to-create-an-email">Try text generation with citations</h2>
+<p>Try out <a href="https://www.perplexity.ai/">Perplexity</a>, another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.</p>
+<p>Here are some example prompts you can try out using the perplexity.</p>
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a response to an email request in a formal tone. I don’t want to present at that conference.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explain how olokizumab works.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Another prompt you can try</p>
+<div class="cell">
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the context of RA, can serology help predict treatment outcomes among patients starting TNFi treatment?.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-
-<p>The LLM will generate an email template for you. You can then ask it to make improvements if needed.</p>
-
-</section>
 <section id="update-emails" class="level3">
-<h3 class="anchored" data-anchor-id="update-emails">Changing tone and translating emails.</h3>
-<p>Here is another example of prompts where the LLM generates and email and then you can ask it to change the words, tone, length, language and writing style. Try the prompts below one after the other in the LLM.</p>
+<h3 class="anchored" data-anchor-id="update-emails">Chain of thought</h3>
+<p>Here is another example of extracting information and then answering questions with chain of thought shown by the LLM.</p>
+
+<p>USMLE Question: A 27-year-old IV drug abuser female gave birth to a 7 lb 2 oz (3.2 kg) baby girl. The obstetrician is worried that the child may have been infected due to the mother’s habitual use of antiretroviral medications. Which of the following assays would hospital labs use to detect the genetic material of HIV if the child had been infected?
+<ul>
+  <li>A) Enzyme-linked immunosorbent assay (ELISA)</li>
+  <li>B) Rapid HIV antibody test</li>
+  <li>C) Polymerase chain reaction (PCR)</li>
+  <li>D) Southern blot</li>
+</ul>
+</p>
+
 
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Write an email to request that Peter send me the data he has promised. I sent two letters 
-    already. Use a nice tone.
-  2. Rewrite in other words.
-  3. Sharpen the tone.
-  4. Shorten.
-  5. Translate to Swedish.
-  6. use the english version and write the request as a poem in old english.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.	Answer the question
+  2.	Ansewr the question with an added “think step by step”.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-<p>Another example of prompt where user writes an email in anger but wants the tone to be nicer is shown below</p>
-
-<div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject: Data Request
-
-  Dear Peter,
-  
-  The data you sent is not formatted correctly. The analysis using the data does not make sense at all. This is very unprofessional and below expectations for the role you have. I am not happy at all.
-     
-  Regards,
-    
-  [Your Name]
-    
-  Rewrite my email, correct language, make the tone a bit nicer.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<p>Try out different changes to the emails and see how the LLM responds.</p>
 
 </section>
 
