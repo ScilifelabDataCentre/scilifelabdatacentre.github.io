@@ -3,11 +3,13 @@ format: html
 editor: visual
 ---
 
-[Exercises](index.html) /
+[Hands-on sessions](index.html) /
 
-## Exercise session 2
+## Hands-on session 2
 
-In this round of exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.
+In this round of hands-on exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.
+
+### [Specialized LLM: SciLifeLab chat assistant](assistant.html)
 
 ### Writing a text document from bullet points -\>
 
@@ -17,4 +19,4 @@ In this round of exercises you can choose various use cases/applications of LLMs
 
 ### [Using LLMs to create a website -\>](website.html)
 
-### Make a browser-based game -\>
+### [Make a browser-based game -\>](browser_game.html)

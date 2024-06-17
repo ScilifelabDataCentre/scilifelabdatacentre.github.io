@@ -3,9 +3,9 @@ format: html
 editor: visual
 ---
 
-[Exercises](index.html) /
+[Hands-on sessions](index.html) /
 
-## Exercise session 1
+## Hands-on session 1
 
 Below is a list of ways in which you can try out text generation with LLMs. You can choose any LLM you wish to work with. Read our suggestions/examples but also experiment yourself and let us know what you learnt 🙂.
 

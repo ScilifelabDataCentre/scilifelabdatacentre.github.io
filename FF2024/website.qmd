@@ -5,7 +5,7 @@ execute:
   eval: false
 ---
 
-[Exercises](index.html) / [Exercise session 2](exercise_session_2.html) /
+[Hands-on sessions](index.html) / [Hands-on session 2](exercise_session_2.html) /
 
 ## Using LLMs to create a website
 

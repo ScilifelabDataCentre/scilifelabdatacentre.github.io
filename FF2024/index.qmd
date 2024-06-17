@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-Welcome to the exercises for the workshop "Hands-on with Large Language Models". Select the exercise session and you will see further guiding on the following page. Questions? Ask us!
+Welcome to the hands-on sessions for the workshop "Hands-on with Large Language Models". Select the hands-on session and you will see further guiding on the following page. Questions? Ask us!
 
 ## Preparation
 
@@ -23,8 +23,8 @@ Select your university for instructions on how to access Microsoft Copilot:
 -   University of Gothenburg: [Instructions for access to Microsoft Copilot](https://studentportal.gu.se/en/news/you-can-now-login-with-your-student-account-to-use-copilot-with-bing)
 -   Uppsala University: [Instructions for access to Microsoft Copilot](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/generate-and-process-texts-and-images-using-ai/log-in-to-copilot)
 
-## Exercises
+## Hands-on sessions
 
-### [Exercise session 1 -\>](exercise_session_1.html)
+### [Hands-on session 1 -\>](exercise_session_1.html)
 
-### [Exercise session 2 -\>](exercise_session_2.html)
+### [Hands-on session 2 -\>](exercise_session_2.html)
