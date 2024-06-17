@@ -94,10 +94,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="update-emails" class="level3">
 <h3 class="anchored" data-anchor-id="update-emails">Chain of thought</h3>
-<p>Here is another example of extracting information and then answering questions with chain of thought shown by the LLM.</p>
+<p>Here is another example of extracting information and then answering questions with chain of thought shown by the LLM. We will use and image and ask the LLM to extract the question from the image and then answer it. You can try to download the image by right clicking the image below and using the option "Save Image As".</p>
+<p>
+<a download="usmleq.jpg" href="usmleq.jpg" title="ImageName">
+  <img alt="ImageName" src="usmleq.jpg">
+</a>
+</p>
+<p>Some LLMs e.g perplexity don't allow image uploads in free versions so in that case you can either use another LLM such as Microsoft Copilot or ChatGPT if you have access. Otherwise you can try copying the question as text. The question is added in text form below.</p>
 
-<p>USMLE Question: A 27-year-old IV drug abuser female gave birth to a 7 lb 2 oz (3.2 kg) baby girl. The obstetrician is worried that the child may have been infected due to the mother’s habitual use of antiretroviral medications. Which of the following assays would hospital labs use to detect the genetic material of HIV if the child had been infected?
-<ul>
+<p><strong>USMLE Question:</strong> A 27-year-old HIV positive female gave birth to a 7 lb 2 oz (3.2 kg) baby girl. The obstetrician is worried that the child may have been infected due to the mother’s habitual use of antiretroviral medications. Which of the following assays would hospital labs use to detect the genetic material of HIV if the child had been infected?
+<ul style="list-style-type: none;">
   <li>A) Enzyme-linked immunosorbent assay (ELISA)</li>
   <li>B) Rapid HIV antibody test</li>
   <li>C) Polymerase chain reaction (PCR)</li>
@@ -106,9 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </p>
 
 
+<p>After uploading the image or copying the text into the LLM, you can ask it to do the following. Use prompt 1 only in case you upload the image.</p>
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.	Answer the question
-  2.	Ansewr the question with an added “think step by step”.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.	Extract the text
+  2.	Answer the question
+  3.	Answer the question with an added “think step by step”.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>
