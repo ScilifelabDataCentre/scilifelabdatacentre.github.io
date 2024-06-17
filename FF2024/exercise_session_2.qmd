@@ -7,7 +7,7 @@ editor: visual
 
 ## Exercise session 2
 
-In this round of exercises you can choose various use cases/applications of LLMs to try out. Select what you think is most fun below.
+In this round of exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.
 
 ### Writing a text document from bullet points -\>
 

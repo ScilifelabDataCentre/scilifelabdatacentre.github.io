@@ -83,13 +83,15 @@ We can be as specific or as general as we want. For example, we can ask to follo
 
 Here you can see the page I had at this stage: [facility_forum_website_4.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_4.html)
 
-### 💪 *ADVANCED* Hosting the website
+### 💪 Challenges
 
-Once you generate your website code the next step is to host it. This is something that the LLM cannot do for you but it possible to ask an LLM to provide guidance in this process as well. It is likely to be especially useful to those who are new to website hosting since it can answer beginner questions and provide detailed instructions.
-
-### Other use cases
-
-Here are some other interesting types of websites you might want to try to create using LLMs.
+Here are some other interesting types of websites you might want to try to create using LLMs:
 
 1.  Create a web page that asks for weight (kg) and height (cm) of a person and calculates BMI.
 2.  Create a web page that asks for the radius of a sphere and calculates the volume.
+
+### 🧙‍♂️🧙‍♀️*ADVANCED* Hosting the website
+
+Once you generate your website code the next step is to host it. This is something that the LLM cannot do for you but it possible to ask an LLM to provide guidance in this process as well. It is likely to be especially useful to those who are new to website hosting since it can answer beginner questions and provide detailed instructions.
+
+### 

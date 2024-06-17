@@ -67,7 +67,7 @@ We can also ask LLMs to create some plots to look at the data visually. It is po
 
 > ☝️ **TIP**: One cool use case of LLMs is uploading an image of a plot and asking it to generate the same plot with your own data.
 
-### 💪 *ADVANCED* Generating code for plots and dashboards
+### 🧙‍♂️🧙‍♀️ *ADVANCED* Generating code for plots and dashboards
 
 Another way to approach visualisation is asking LLM tools to generate code for creating a visualisation. This will require to already have at least some beginner-level knowledge of some relatively popular (only in those cases will LLMs have seen enough data to help us) coding tool for making visualizations. For example, *ggplot2* in R or *Plotly* in Python.
 
@@ -94,3 +94,28 @@ In this case the LLM is probably going to generate code for an R Shiny dashboard
 ```{R}
 # When I select columns containing a space in the column names I see an error message. Correct the code to avoid this error.
 ```
+
+### 💪 Challenges
+
+Here are some other interesting ways in which you might want to test LLMs:
+
+##### Tables
+
+1.  make a table of ten important pathways associated with RA and drugs targeting these pathways
+2.  Export as excel file
+3.  double-check that the drugs listed are correct
+4.  redo the table, but only take information from drugbank
+5.  draw the chemical structure of Baricitinib
+6.  \[compare smiles, hallucinations\]
+
+##### Synthetic data
+
+1.  create an excel spreadsheet with 100 rows and 5 columns, where each column has values drawn from a normal distribution with a random mean.
+2.  Include an extra column (Y) with either 1 or 2 as values.
+3.  Scale column 3 to unit variance make a violin plot of the data with a black and white color scheme Make a PCA-plot, color by the column Y
+4.  Redo PCA with a red and blue color scheme
+
+##### Upload dataset
+
+1.  Upload file ames-opti.txt at <https://drive.google.com/drive/folders/1PLm_wAUhM8JJsmzCAMHk7z5ON8Gp0jXt?usp=sharing> 
+2.  These are results from an optimization. Interpret them
