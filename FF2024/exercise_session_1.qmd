@@ -9,8 +9,8 @@ editor: visual
 
 It is now time to try out the Large Language Models in practice! Make sure you have some LLM open to interact with, if not go [back to the preparation step](index.html). Below you can select what you would like to try out during this session.
 
-### Basic text tasks -\>
+### [Basic tasks with text generation -\>](text.html)
 
-### Working with data in Excel -\>
+### [Generate text with sources/references -\>](perplexity.html)
 
 ## 

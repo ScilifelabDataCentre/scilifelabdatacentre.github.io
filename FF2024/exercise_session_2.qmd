@@ -15,10 +15,10 @@ In this round of hands-on exercises you can choose various use cases/application
 
 ### [Upload and chat about a document -\>](document.html)
 
-### [Generate text with sources/references -\>](perplexity.html)
+### [Image generation -\>](images.html) \[🤓 basic challenge\]
 
 ### [LLM as a data analysis assistant -\>](data_analysis.html) \[advanced\]
 
 ### [Using LLMs to create a website -\>](website.html) \[advanced\]
 
-### [Make a browser-based game -\>](browser_game.html) \[advanced\] \[🤓 challenge\]
+### [Make a browser-based game -\>](browser_game.html) \[advanced\] \[🤓 advanced challenge\]

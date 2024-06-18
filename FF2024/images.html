@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>exercise_session_1</title>
+<title>images</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,19 +20,53 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="exercise_session_1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="exercise_session_1_files/libs/quarto-html/quarto.js"></script>
-<script src="exercise_session_1_files/libs/quarto-html/popper.min.js"></script>
-<script src="exercise_session_1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="exercise_session_1_files/libs/quarto-html/anchor.min.js"></script>
-<link href="exercise_session_1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="exercise_session_1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="exercise_session_1_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="exercise_session_1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="exercise_session_1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="images_files/libs/clipboard/clipboard.min.js"></script>
+<script src="images_files/libs/quarto-html/quarto.js"></script>
+<script src="images_files/libs/quarto-html/popper.min.js"></script>
+<script src="images_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="images_files/libs/quarto-html/anchor.min.js"></script>
+<link href="images_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="images_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="images_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="images_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="images_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -45,19 +79,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="index.html">Hands-on sessions</a> /</p>
-<section id="session-1" class="level2">
-<h2 class="anchored" data-anchor-id="session-1">Session 1</h2>
-<p>It is now time to try out the Large Language Models in practice! Make sure you have some LLM open to interact with, if not go <a href="index.html">back to the preparation step</a>. Below you can select what you would like to try out during this session.</p>
-<section id="basic-tasks-with-text-generation--" class="level3">
-<h3 class="anchored" data-anchor-id="basic-tasks-with-text-generation--"><a href="text.html">Basic tasks with text generation -&gt;</a></h3>
-</section>
-<section id="generate-text-with-sourcesreferences--" class="level3">
-<h3 class="anchored" data-anchor-id="generate-text-with-sourcesreferences--"><a href="perplexity.html">Generate text with sources/references -&gt;</a></h3>
-</section>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<p><a href="index.html">Hands-on sessions</a> / <a href="exercise_session_2.html">Hands-on session 2</a> /</p>
+  <div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🤓 Challenge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Create an image of an animal that is a cross between two different real animals. Save it as a file and post it in <a href="https://scilifelab.slack.com/archives/C078FF8UBFD">the Slack channel for this session</a>. We will demo the submissions on the big screen.</p>
+</div>
+</div>
+<section id="image-generation" class="level2">
+<h2 class="anchored" data-anchor-id="image-generation">Image generation</h2>
+<p>One use of LLMs that has become popular is image generation. The version of Microsoft Copilot available via the universities can create images. The free version of ChatGPT does not offer full image generation capability but you can try and see what it gives you 😀.</p>
+<p>Some example prompts:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>An astronaut standing on the moon looking at Earth.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>A futuristic city with sleek, glass<span class="sc">-</span>covered skyscrapers, flying cars zipping through the air, and digital billboards flashing with vibrant colors.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>An illustration of the water cycle, showing evaporation, condensation, precipitation, and collection.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 
 </main>
