@@ -22,7 +22,7 @@ Create a polite response no
 ```
 
 ```{r}
-Say no and make sure they don’t ask you again
+Say no and make sure they don’t ask me again
 ```
 
 ```{r}

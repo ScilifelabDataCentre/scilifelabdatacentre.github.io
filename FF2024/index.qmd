@@ -31,6 +31,7 @@ Select your university for instructions on how to access Microsoft Copilot:
 -   Umeå University: [Instructions for access to Microsoft Copilot](https://manual.its.umu.se/en/how-to-use-bing-chat/)
 -   University of Gothenburg: [Instructions for access to Microsoft Copilot](https://studentportal.gu.se/en/news/you-can-now-login-with-your-student-account-to-use-copilot-with-bing)
 -   Uppsala University: [Instructions for access to Microsoft Copilot](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/generate-and-process-texts-and-images-using-ai/log-in-to-copilot)
+-   Örebro University: no LLM available, use ChatGPT, Mistral or another.
 
 ## Hands-on sessions
 

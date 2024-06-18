@@ -82,31 +82,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="index.html">Hands-on sessions</a> / <a href="exercise_session_2.html">Hands-on session 2</a> /</p>
 <section id="upload-and-chat-about-a-document" class="level2">
 <h2 class="anchored" data-anchor-id="upload-and-chat-about-a-document">Upload and chat about a document</h2>
-<p>One use case of LLMs that has become popular is providing a document (for example, a PDF file) and chatting with LLMs about the content. For example, you can ask it to summarize, answer specific questions, find weaknesses and strengths, rewrite sections, and so on.</p>
+<p>One use case of LLMs that has become popular is providing a document (for example, a PDF file) and chatting with LLMs about the content. An alternative that will work with some of the LLM tools is providing a link to the document instead of uploading it.</p>
+<section id="document-upload" class="level5">
+<h5 class="anchored" data-anchor-id="document-upload">Document upload</h5>
+<p>If you have access to Microsoft Copilot via your university then you can simply use the upload function in the chat to upload a PDF file and then ask it to answer questions.</p>
+<p>There is a number of free alternatives that you can find online. One of those is <a href="https://www.chatpdf.com/">https://www.chatpdf.com/</a>. You simply upload your PDF document here and start asking questions. One nice feature of this tool is that it tells you where it found the answer to your question.</p>
+<blockquote class="blockquote">
+<p>☝️ <strong>TIP</strong>: You can upload a document in Swedish but ask questions in English and vice versa because the LLM can just translate between them.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>☝️ <strong>TIP</strong>: If you run into a file size limitation on Microsoft Copilot, try the free alternative https://chatpdf.com/.</p>
+</blockquote>
+</section>
+<section id="example-documents" class="level5">
+<h5 class="anchored" data-anchor-id="example-documents">Example documents</h5>
 <p>In order to test this out you can use your own document or download one of our suggestions:</p>
 <ul>
 <li><a href="https://www.scilifelab.se/wp-content/uploads/2020/05/scilifelab-roadmap-2020-2030_final.pdf">SciLifeLab Roadmap for 2020-2030</a>;</li>
 <li><a href="https://www.scilifelab.se/wp-content/uploads/2024/02/SciLifeLab-arsrapport-2023.pdf">SciLifeLab annual report 2023</a>;</li>
 <li><a href="https://www.pnas.org/doi/pdf/10.1073/pnas.2216216120?download=true">Antibiotic perseverance increases the risk of resistance development (Brandis, Larsson, Elf, <em>PNAS 2023</em>)</a>.</li>
 </ul>
-<blockquote class="blockquote">
-<p>☝️ <strong>TIP</strong>: You can upload a document in Swedish but ask questions in English and vice versa because the LLM can just translate between them.</p>
-</blockquote>
-<section id="microsoft-copilot" class="level3">
-<h3 class="anchored" data-anchor-id="microsoft-copilot">Microsoft Copilot</h3>
-<p>If you have access to Microsoft Copilot via your university then you can simply use the upload function in the chat to upload a PDF file and then ask it to answer questions.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>I am uploading a PDF file. Summarize the content.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<blockquote class="blockquote">
-<p>☝️ <strong>TIP</strong>: If you run into a file size limitation, try the free alternative that we suggest below.</p>
-</blockquote>
 </section>
-<section id="free-alternatives" class="level3">
-<h3 class="anchored" data-anchor-id="free-alternatives">Free alternatives</h3>
-<p>There is a number of free alternatives that you can find online. One of those is <a href="https://www.chatpdf.com/">https://www.chatpdf.com/</a>. You simply upload your PDF document here and start asking questions. One nice feature of this tool is that it tells you where it found the answer to your question. For example, I uploaded the SciLifeLab annual report 2023 and asked the following.</p>
+<section id="asking-for-information-from-the-document" class="level3">
+<h3 class="anchored" data-anchor-id="asking-for-information-from-the-document">Asking for information from the document</h3>
+<p>For example, we can upload the SciLifeLab annual report 2023 and ask the following.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>What was the total budget of SciLifeLab <span class="cf">in</span> <span class="dv">2023</span>?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>What was the total budget of SciLifeLab <span class="cf">in</span> <span class="dv">2023</span>?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Create an executive summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Suggest improvements</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="reviewing-a-paper" class="level3">
+<h3 class="anchored" data-anchor-id="reviewing-a-paper">Reviewing a paper</h3>
+<p>One use case is to ask to use LLMs as a tool to help review your texts.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Act as a tired, critical reviewer who looks <span class="cf">for</span> reasons to deduct points from a grant application. Read and criticize the following manuscript<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.medrxiv.org<span class="sc">/</span>content<span class="sc">/</span><span class="fl">10.1101</span><span class="sc">/</span><span class="dv">2024</span>.<span class="dv">03</span>.<span class="fl">01.24303566</span>v1&nbsp;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="summarizing-documents" class="level3">
+<h3 class="anchored" data-anchor-id="summarizing-documents">Summarizing documents</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Summarize the article at https<span class="sc">:</span><span class="er">//</span>journals.plos.org<span class="sc">/</span>ploscompbiol<span class="sc">/</span>article?id<span class="ot">=</span><span class="fl">10.1371</span><span class="sc">/</span>journal.pcbi<span class="fl">.1011323</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>List three shortcomings of the paper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="finding-articles" class="level3">
+<h3 class="anchored" data-anchor-id="finding-articles">Finding articles</h3>
+<p>In our experience these prompts work particularly well in Microsoft Copilot and Perplexity.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Give me one reference to a scientific paper that supports the hypothesis that imatinib is useful <span class="cf">for</span> treating diabetes, and another reference that it is not useful <span class="cf">for</span> diabetes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Redo but only clinical studies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>

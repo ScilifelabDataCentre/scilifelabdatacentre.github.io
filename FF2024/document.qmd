@@ -9,7 +9,19 @@ execute:
 
 ## Upload and chat about a document
 
-One use case of LLMs that has become popular is providing a document (for example, a PDF file) and chatting with LLMs about the content. For example, you can ask it to summarize, answer specific questions, find weaknesses and strengths, rewrite sections, and so on.
+One use case of LLMs that has become popular is providing a document (for example, a PDF file) and chatting with LLMs about the content. An alternative that will work with some of the LLM tools is providing a link to the document instead of uploading it.
+
+##### Document upload
+
+If you have access to Microsoft Copilot via your university then you can simply use the upload function in the chat to upload a PDF file and then ask it to answer questions.
+
+There is a number of free alternatives that you can find online. One of those is <a href="https://www.chatpdf.com/">https://www.chatpdf.com/</a>. You simply upload your PDF document here and start asking questions. One nice feature of this tool is that it tells you where it found the answer to your question.
+
+> ☝️ **TIP**: You can upload a document in Swedish but ask questions in English and vice versa because the LLM can just translate between them.
+
+> ☝️ **TIP**: If you run into a file size limitation on Microsoft Copilot, try the free alternative https://chatpdf.com/.
+
+##### Example documents
 
 In order to test this out you can use your own document or download one of our suggestions:
 
@@ -17,22 +29,48 @@ In order to test this out you can use your own document or download one of our s
 -   <a href="https://www.scilifelab.se/wp-content/uploads/2024/02/SciLifeLab-arsrapport-2023.pdf">SciLifeLab annual report 2023</a>;
 -   [Antibiotic perseverance increases the risk of resistance development (Brandis, Larsson, Elf, *PNAS 2023*)](https://www.pnas.org/doi/pdf/10.1073/pnas.2216216120?download=true).
 
-> ☝️ **TIP**: You can upload a document in Swedish but ask questions in English and vice versa because the LLM can just translate between them.
+### Asking for information from the document
 
-### Microsoft Copilot
-
-If you have access to Microsoft Copilot via your university then you can simply use the upload function in the chat to upload a PDF file and then ask it to answer questions.
-
-```{r}
-I am uploading a PDF file. Summarize the content.
-```
-
-> ☝️ **TIP**: If you run into a file size limitation, try the free alternative that we suggest below.
-
-### Free alternatives
-
-There is a number of free alternatives that you can find online. One of those is <a href="https://www.chatpdf.com/">https://www.chatpdf.com/</a>. You simply upload your PDF document here and start asking questions. One nice feature of this tool is that it tells you where it found the answer to your question. For example, I uploaded the SciLifeLab annual report 2023 and asked the following.
+For example, we can upload the SciLifeLab annual report 2023 and ask the following.
 
 ```{r}
 What was the total budget of SciLifeLab in 2023?
+```
+
+```{r}
+Create an executive summary
+```
+
+```{r}
+Suggest improvements
+```
+
+### Reviewing a paper
+
+One use case is to ask to use LLMs as a tool to help review your texts.
+
+```{r}
+Act as a tired, critical reviewer who looks for reasons to deduct points from a grant application. Read and criticize the following manuscript: https://www.medrxiv.org/content/10.1101/2024.03.01.24303566v1 
+```
+
+### Summarizing documents
+
+```{r}
+Summarize the article at https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011323
+```
+
+```{r}
+List three shortcomings of the paper
+```
+
+### Finding articles
+
+In our experience these prompts work particularly well in Microsoft Copilot and Perplexity.
+
+```{r}
+Give me one reference to a scientific paper that supports the hypothesis that imatinib is useful for treating diabetes, and another reference that it is not useful for diabetes
+```
+
+```{r}
+Redo but only clinical studies
 ```
