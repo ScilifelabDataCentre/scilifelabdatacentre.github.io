@@ -12,5 +12,3 @@ It is now time to try out the Large Language Models in practice! Make sure you h
 ### [Basic tasks with text generation -\>](text.html)
 
 ### [Generate text with sources/references -\>](perplexity.html)
-
-## 
