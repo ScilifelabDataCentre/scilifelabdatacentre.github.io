@@ -18,7 +18,7 @@ execute:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Create an image of an animal that is a cross between two different real animals. Save it as a file and post it in <a href="https://scilifelab.slack.com/archives/C078FF8UBFD">the Slack channel for this session</a>. We will demo the submissions on the big screen.</p>
+<p>Create an image of an animal that is a cross between two different real animals. Save it as a file and post it in <a href="https://scilifelab.slack.com/archives/C078U8VL10R">the Slack channel for this session</a>. We will demo the submissions on the big screen.</p>
 </div>
 </div>
 ```
