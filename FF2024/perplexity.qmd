@@ -1,0 +1,24 @@
+---
+format: html
+editor: visual
+execute:
+  eval: false
+---
+
+[Hands-on sessions](index.html) / [Hands-on session 2](exercise_session_2.html) /
+
+## Generate text with sources/references
+
+The current LLM-based tools are often critisized for generating text without any references to sources which makes it difficult to follow up and see to what extent the generated text is factually correct or to at least make an evaluation of the reliability of the source. In this example we encourage you to try out [Perplexity](https://www.perplexity.ai/) (https://perplexity.ai), another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.
+
+The best way to test out whether Perplexity indeed does a good job is to ask it about something that you know. Look at the quality of the text it generates but also of the sources that it provides for this information. Would you say the same and base your answer on the same sources?
+
+Here are some example prompts you can try out using the Perplexity.
+
+```{r}
+Explain how olokizumab works.
+```
+
+```{r}
+In the context of RA, can serology help predict treatment outcomes among patients starting TNFi treatment?
+```

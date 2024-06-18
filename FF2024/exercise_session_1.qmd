@@ -5,38 +5,12 @@ editor: visual
 
 [Hands-on sessions](index.html) /
 
-## Hands-on session 1
+## Session 1
 
-Below is a list of ways in which you can try out text generation with LLMs. You can choose any LLM you wish to work with. Read our suggestions/examples but also experiment yourself and let us know what you learnt 🙂.
+It is now time to try out the Large Language Models in practice! Make sure you have some LLM open to interact with, if not go [back to the preparation step](index.html). Below you can select what you would like to try out during this session.
 
-### Try out text generation on your own as you wish
+### Basic text tasks -\>
 
-If you never tried an LLM this is your time! ...
+### Working with data in Excel -\>
 
-### Try text generation with citations
-
-Try out [Perplexity](https://www.perplexity.ai/), another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.
-
-### Try an LLM fine-tuned with specific knowledge
-
-LLMs can be reasonably good at general knowledge collected from the internet but in some cases you might want it to focus on more specific documents or knowledge or add some knowledge and documents to what it already knows. This is possible with the so-called Retrieval-Augmented Generation aka RAG. Roughly, one creates a RAG by providing additional information to an LLM.
-
-We prepared a tool for you in which you can try out.....
-
-### Chat about a document
-
--   Upload a document and ask questions about it: use Microsoft Copilot or <https://www.chatpdf.com/> \[responsible for preparation: Arnold\]
-
-    -   Ask questions about a research paper
-
-    -   Ask to write an abstract/short summary
-
-### Chat about a webpage
-
-We created a tool that...
-
-### Try LLM for language correction and language tutor
-
-Help with correcting mistakes in a text in a foreign language and help with language learning (Swedish as an example)
-
-### 
+## 

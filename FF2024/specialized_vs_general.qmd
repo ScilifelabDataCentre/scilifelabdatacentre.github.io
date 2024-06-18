@@ -1,0 +1,32 @@
+---
+format: html
+editor: visual
+execute:
+  eval: false
+---
+
+[Hands-on sessions](index.html) / [Hands-on session 2](exercise_session_2.html) /
+
+## Compare a specialized and general LLM
+
+LLMs can be good at answering questions based on general knowledge collected from the internet but in some cases you might want it to focus on more specific documents or knowledge or add some knowledge and documents to what it already knows. This is possible with the so-called Retrieval-Augmented Generation aka RAG. Roughly, one creates a RAG by providing additional information from external resources to an LLM.
+
+In this exercise we encourage you to compare a specialized LLM with a general knowledge one. We created an application where you can try this: [https://chat.serve.scilifelab.se/](https://chat.serve.scilifelab.se/){.uri target="_blank"}.
+
+In the tab "Ask a question about SciLifeLab" your question is answered by a tool that has been trained on data about SciLifeLab in addition to just having its own general knowledge. In the tab "Ask a general LLM" you will be sending a question to just the general LLM, without any added knowledge.
+
+For example, you can ask the following:
+
+```{r}
+Are there any events in June?
+```
+
+In my case the specialized one provided the following answer:
+
+> \- Are there any events in June?\
+> - Yes, there are events in June mentioned on the website. These include the RaukR, Advanced R for Bioinformatics workshop, the Advanced course in Metabolic Engineering & Systems Biology (MESB), and the Uppsala University DDLS Fellows public seminars with candidates.
+
+On the other hand, the general one provided the following answer:
+
+> \- Are there any events in June?\
+> - Yes, there are many events that typically happen in June such as graduations, weddings, concerts, summer solstice, Pride Month celebrations, Father's Day, and many more.
