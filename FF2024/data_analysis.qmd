@@ -13,7 +13,7 @@ LLMs are able to analyse and provide answers based on tabular data. Some tools a
 
 Once the data is uploaded, it is possible to ask general questions about the dataset, ask for numbers that can be found directly in some cell, questions that require manipulation and combination of data, ask for data visualisation, and in case you want something to work with further it is possible to ask for a reformatted dataset that you can copy and save into a file or to generate code to analyse or visualize the dataset.
 
-Below are suggestions for some of the interactions that you can have with an LLM using an example dataset. We will use the dataset on population of Sweden between 1749 and 2023 provided by Statistics Sweden (Statistiska centralbyrån*)*.
+Below are suggestions for some of the interactions that you can have with an LLM using an example dataset. We will use the dataset on population of Sweden between 1749 and 2023 provided by Statistics Sweden (Statistiska centralbyrån).
 
 ### Loading the dataset
 
@@ -96,4 +96,38 @@ In this case the LLM is probably going to generate code for an R Shiny dashboard
 
 ```{R}
 When I select columns containing a space in the column names I see an error message. Correct the code to avoid this error.
+```
+
+### Other examples of using LLMs for data analysis
+
+##### **Tables and plots**
+
+```{R}
+Generate a table of 5 columns with values in each column drawn from 5 different distributions.
+```
+
+```{R}
+Make a violin plot of the dataset.
+```
+
+```{R}
+Make a canvas with three subplots; a heatmap, a histogram and a scatterplot
+```
+
+#### **Multivariate data**
+
+```{R}
+Create an excel spreadsheet with 100 rows and 5 columns, where each column has values drawn from a normal distribution with a random mean.
+```
+
+```{R}
+Include an extra column (Y) with either 1 or 2 as values.
+```
+
+```{R}
+Scale column 3 to unit variance make a violin plot of the data with a black and white color scheme Make a PCA-plot, color by the column Y.
+```
+
+```{R}
+Redo PCA with a red and blue color scheme.
 ```

@@ -84,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="llm-as-a-data-analysis-assistant">LLM as a data analysis assistant</h2>
 <p>LLMs are able to analyse and provide answers based on tabular data. Some tools allow to upload a file (for example, in .txt, .csv, or excel format); in other cases we can insert the dataset as is into the chat window, and this will work reasonably well.</p>
 <p>Once the data is uploaded, it is possible to ask general questions about the dataset, ask for numbers that can be found directly in some cell, questions that require manipulation and combination of data, ask for data visualisation, and in case you want something to work with further it is possible to ask for a reformatted dataset that you can copy and save into a file or to generate code to analyse or visualize the dataset.</p>
-<p>Below are suggestions for some of the interactions that you can have with an LLM using an example dataset. We will use the dataset on population of Sweden between 1749 and 2023 provided by Statistics Sweden (Statistiska centralbyrån<em>)</em>.</p>
+<p>Below are suggestions for some of the interactions that you can have with an LLM using an example dataset. We will use the dataset on population of Sweden between 1749 and 2023 provided by Statistics Sweden (Statistiska centralbyrån).</p>
 <section id="loading-the-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="loading-the-dataset">Loading the dataset</h3>
 <p>As mentioned, some tools allow upload of files whereas others do not. For example, paid version of Microsoft Copilot and ChatGPT allow to upload file whereas free versions (for example free ChatGPT) often do not allow file upload. In case file upload is not allowed, you can simply select the text of the dataset on the webpage, copy it, and paste the data into the chat window. The spaces or other delimiters should be interpreted correctly by the LLMs in most cases.</p>
@@ -157,6 +157,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>When I select columns containing a space <span class="cf">in</span> the column names I see an error message. Correct the code to avoid this error.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="other-examples-of-using-llms-for-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="other-examples-of-using-llms-for-data-analysis">Other examples of using LLMs for data analysis</h3>
+<section id="tables-and-plots" class="level5">
+<h5 class="anchored" data-anchor-id="tables-and-plots"><strong>Tables and plots</strong></h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Generate a table of <span class="dv">5</span> columns with values <span class="cf">in</span> each column drawn from <span class="dv">5</span> different distributions.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Make a violin plot of the dataset.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Make a canvas with three subplots; a heatmap, a histogram and a scatterplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="multivariate-data" class="level4">
+<h4 class="anchored" data-anchor-id="multivariate-data"><strong>Multivariate data</strong></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Create an excel spreadsheet with <span class="dv">100</span> rows and <span class="dv">5</span> columns, where each column has values drawn from a normal distribution with a random mean.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Include an extra <span class="fu">column</span> (Y) with either <span class="dv">1</span> or <span class="dv">2</span> as values.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Scale column <span class="dv">3</span> to unit variance make a violin plot of the data with a black and white color scheme Make a PCA<span class="sc">-</span>plot, color by the column Y.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Redo PCA with a red and blue color scheme.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 </section>
 
