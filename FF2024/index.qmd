@@ -1,10 +1,19 @@
 ---
-title: "Hands-on with Large Language Models: Exercises"
+title: ""
 format: html
 editor: visual
 ---
 
-Welcome to the hands-on sessions for the workshop "Hands-on with Large Language Models". Select the hands-on session and you will see further guiding on the following page. Questions? Ask us!
+```{=html}
+    <div style="border: 2px solid blue; text-align: center; color: blue;">
+        <p><span style="font-size: 24px;">This page URL:</span><br>
+        <span style="font-size: 36px;">https://tinyurl.com/FF2024-hands-on</span>
+        </p>
+    </div>
+```
+# Hands-on with Large Language Models
+
+Welcome to the hands-on sessions for the workshop "Hands-on with Large Language Models". Select the session bellow and you will see further guiding on the following page. Questions? Ask us!
 
 ## Preparation
 

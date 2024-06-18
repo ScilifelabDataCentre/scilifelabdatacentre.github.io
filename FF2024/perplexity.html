@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>website</title>
+<title>perplexity</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="website_files/libs/clipboard/clipboard.min.js"></script>
-<script src="website_files/libs/quarto-html/quarto.js"></script>
-<script src="website_files/libs/quarto-html/popper.min.js"></script>
-<script src="website_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="website_files/libs/quarto-html/anchor.min.js"></script>
-<link href="website_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="website_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="website_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="website_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="website_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="perplexity_files/libs/clipboard/clipboard.min.js"></script>
+<script src="perplexity_files/libs/quarto-html/quarto.js"></script>
+<script src="perplexity_files/libs/quarto-html/popper.min.js"></script>
+<script src="perplexity_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="perplexity_files/libs/quarto-html/anchor.min.js"></script>
+<link href="perplexity_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="perplexity_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="perplexity_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="perplexity_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="perplexity_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -79,48 +79,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><a href="index.html">Exercises</a> / <a href="exercise_session_1.html">Exercise session 1</a> /</p>
-<section id="using-llms-to-create-an-email" class="level2">
-<h2 class="anchored" data-anchor-id="using-llms-to-create-an-email">Try text generation with citations</h2>
-<p>Try out <a href="https://www.perplexity.ai/">Perplexity</a>, another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.</p>
-<p>Here are some example prompts you can try out using the perplexity.</p>
+<p><a href="index.html">Hands-on sessions</a> / <a href="exercise_session_2.html">Hands-on session 2</a> /</p>
+<section id="generate-text-with-sourcesreferences" class="level2">
+<h2 class="anchored" data-anchor-id="generate-text-with-sourcesreferences">Generate text with sources/references</h2>
+<p>The current LLM-based tools are often critisized for generating text without any references to sources which makes it difficult to follow up and see to what extent the generated text is factually correct or to at least make an evaluation of the reliability of the source. In this example we encourage you to try out <a href="https://www.perplexity.ai/">Perplexity</a> (https://perplexity.ai), another LLM that prides itself with accuracy and source citations. It is supposed to be better than the other popular LLMs for scientific work as it claims to provide references.</p>
+<p>The best way to test out whether Perplexity indeed does a good job is to ask it about something that you know. Look at the quality of the text it generates but also of the sources that it provides for this information. Would you say the same and base your answer on the same sources?</p>
+<p>Here are some example prompts you can try out using the Perplexity.</p>
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explain how olokizumab works.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Explain how olokizumab works.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Another prompt you can try</p>
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the context of RA, can serology help predict treatment outcomes among patients starting TNFi treatment?.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>In the context of RA, can serology help predict treatment outcomes among patients starting TNFi treatment?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-<section id="update-emails" class="level3">
-<h3 class="anchored" data-anchor-id="update-emails">Chain of thought</h3>
-<p>Here is another example of extracting information and then answering questions with chain of thought shown by the LLM. We will use an image and ask the LLM to extract the question from the image and then answer it. You can try to download the image below by clicking it. If that does not work, download the image using right click and then the option "Save Image As".</p>
-<p>
-<a download="usmleq.jpg" href="usmleq.jpg" title="ImageName">
-  <img alt="ImageName" src="usmleq.jpg">
-</a>
-</p>
-<p>Some LLMs e.g perplexity don't allow image uploads in free versions so in that case you can either use another LLM such as Microsoft Copilot or ChatGPT if you have access. Otherwise you can try copying the question as text. The question is added in text form below.</p>
-
-<p><strong>USMLE Question:</strong> A 27-year-old HIV positive female gave birth to a 7 lb 2 oz (3.2 kg) baby girl. The obstetrician is worried that the child may have been infected due to the mother’s habitual use of antiretroviral medications. Which of the following assays would hospital labs use to detect the genetic material of HIV if the child had been infected?
-<ul style="list-style-type: none;">
-  <li>A) Enzyme-linked immunosorbent assay (ELISA)</li>
-  <li>B) Rapid HIV antibody test</li>
-  <li>C) Polymerase chain reaction (PCR)</li>
-  <li>D) Southern blot</li>
-</ul>
-</p>
-
-
-<p>After uploading the image or copying the text into the LLM, you can ask it to do the following. Use prompt 1 only in case you upload the image.</p>
-<div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.	Extract the text
-  2.	Answer the question
-  3.	Answer the question with an added “think step by step”.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-</section>
-
 </section>
 
 </main>

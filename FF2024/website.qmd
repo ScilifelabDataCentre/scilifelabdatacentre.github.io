@@ -85,7 +85,7 @@ Grape: #491F53
 
 Here you can see the page I had at this stage: [facility_forum_website_4.html](https://blobserver.dc.scilifelab.se/blob/facility_forum_website_4.html)
 
-### 💪 Challenges
+### Other ideas
 
 Here are some other interesting types of websites you might want to try to create using LLMs:
 

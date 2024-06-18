@@ -5,18 +5,20 @@ editor: visual
 
 [Hands-on sessions](index.html) /
 
-## Hands-on session 2
+## Session 2
 
 In this round of hands-on exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.
 
-### [Specialized LLM: SciLifeLab chat assistant](assistant.html)
+### [Try a SciLifeLab chat assistant -\>](assistant.html)
 
-### Writing a text document from bullet points -\>
+### [Compare a specialized and general LLM -\>](specialized_vs_general.html)
 
-### Preparing a PowerPoint presentation -\>
+### [Upload and chat about a document -\>](document.html)
 
-### [LLM as a data analysis assistant -\>](data_analysis.html)
+### [Generate text with sources/references -\>](perplexity.html)
 
-### [Using LLMs to create a website -\>](website.html)
+### [LLM as a data analysis assistant -\>](data_analysis.html) \[advanced\]
 
-### [Make a browser-based game -\>](browser_game.html)
+### [Using LLMs to create a website -\>](website.html) \[advanced\]
+
+### [Make a browser-based game -\>](browser_game.html) \[advanced\] \[🤓 challenge\]
