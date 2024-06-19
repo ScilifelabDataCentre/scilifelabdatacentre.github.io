@@ -93,11 +93,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <h2 class="anchored" data-anchor-id="using-llms-to-create-a-browser-game">Using LLMs to create a browser game</h2>
-<p>This is another example of using LLMs to generate code. We will try to create a simple browser based html game and add some game elements to see how the LLM can help us create the game. The aim of the exercise is not to recreate the same thing as the LLM generates different code on separate interactions and neither to use the LLM in an "efficient" way by following prompt best practices but just to give an overview of what it can understand and do. In this instance we will create a game of Tic Tac Toe and build on top of it but you can try it with other simple games as well. At the end of the page you will find a link with the whole interartion we had with the LLM, all the prompts and resulting code, so you can look at that later as well.</p>
+<p>This is another example of using LLMs to generate code. We will try to create a simple browser based html game and add some game elements to see how the LLM can help us create the game. The aim of the exercise is not to recreate the same thing as the LLM generates different code on separate interactions and neither to use the LLM in an "efficient" way by following prompt best practices but just to give an overview of what it can understand and do. In this instance we will create a game of Tic Tac Toe and build on top of it but you can try it with other simple games as well. At the end of the page you will find a link with the whole interaction we had with the LLM, all the prompts and resulting code, so you can look at that later as well.</p>
 
 <section id="creating-a-simple-browser-game" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-simple-browser-game">Creating a simple browser game</h3>
-<p>We will begin by asking the LLM if it can genrate an HTML game for us and try to be more specific in the following prompts to improve the game.</p>
+<p>We will begin by asking the LLM if it can generate an HTML game for us and try to be more specific in the following prompts to improve the game.</p>
 
 <p>As with the exercise on websites, you can ask for a simple game to start with and improve from there asking the LLM to generate more complex visuals or interactive elements each time. This way it is easier to ask for changes and explain what you would like to see in each case.</p>
 <blockquote class="blockquote">
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">Can you help me develop an html game based on tic tac toe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will generate the code for you and the LLM might give instructions as well on how to setup this code. It usually generates 3 different code files for you. These are the html file called <em>index.html</em>, the css file called <em>styles.css</em> and the javascript file called <em>script.js</em>. You will need to manually create files with these names on you computer and save them in the same directory. Then you can copy the code for each file into the corresponding file locally and save the file. Make sure you have the file names and extensions set up correctly. When this is done you can open the <em>index.html</em> file in a browser and you should be able to see the game created by the LLM. You will need to repeat this process every time new code is generated to check the results.</p>
+<p>This will generate the code for you and the LLM might give instructions as well on how to setup this code. It usually generates 3 different code files for you. These are the html file called <em>index.html</em>, the css file called <em>styles.css</em> and the javascript file called <em>script.js</em>. You will need to manually create files with these names on your computer and save them in the same directory. Then you can copy the code for each file into the corresponding file locally and save the file. Make sure you have the file names and extensions set up correctly. When this is done you can open the <em>index.html</em> file in a browser and you should be able to see the game created by the LLM. You will need to repeat this process every time new code is generated to check the results.</p>
 <p>The first prompt created the code for the game and after following the setup steps mentioned in the paragraph above the resulting game looked like this: <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_1.png">facility_forum_browser_game_1.html</a></p>
 </section>
 <section id="adding-interactive-elements" class="level3">
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="improving-the-look">Improving the look</h3>
 <p>To improve the look of the game we can use libraries such as Bootstrap to make it look more appealing. We can be as specific or as general as we want. I will be a bit general and ask it to use bootstrap to with a prompt like this</p>
 <div class="cell">
-  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">Can you improve it visually by adding more colors and use bootstrap to make this look better. Can you also move the tic tac toe grid to the centre and create a popup for the winner. Add a scoreboard as well.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">Can you improve it visually by adding more colors and use bootstrap to make this look better. Can you also move the tic tac toe grid to the center and create a popup for the winner. Add a scoreboard as well.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, the game used UI elements from bootstrap and looked visually "better": <a href="https://blobserver.dc.scilifelab.se/blob/facility_forum_borwser_game_4.png">facility_forum_borwser_game_3.png</a></p>
 <p>To make it slightly more relevant we can ask the LLM to change the theme with a prompt like this</p>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="advanced-hosting-the-game" class="level3">
 <h3 class="anchored" data-anchor-id="advanced-hosting-the-game">Hosting the game</h3>
-<p>After the code in generated you can ask the LLM if it can host the game. It can't do that but it can give you suggestions. I asked it if if could deploy the app to a service called netlify</p>
+<p>After the code in generated you can ask the LLM if it can host the game. It can't do that but it can give you suggestions. I asked it if it could deploy the app to a service called netlify</p>
 <div class="cell">
   <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">Can you deploy this to netlify?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
