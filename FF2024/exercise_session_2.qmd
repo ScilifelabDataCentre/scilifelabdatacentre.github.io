@@ -9,10 +9,6 @@ editor: visual
 
 In this round of hands-on exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.
 
-### [~~Try a SciLifeLab chat assistant -\>~~](assistant.html)
-
-### [~~Compare a specialized and general LLM -\>~~](specialized_vs_general.html)
-
 ### [Upload and chat about a document -\>](document.html)
 
 ### [Image generation -\>](images.html)
