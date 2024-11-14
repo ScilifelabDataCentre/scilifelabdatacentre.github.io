@@ -13,8 +13,8 @@ In this round of hands-on exercises you can choose various use cases/application
 
 ### [Image generation -\>](images.html)
 
-### [LLM as a data analysis assistant -\>](data_analysis.html) \[advanced\]
+### [LLM as a data analysis assistant -\>](data_analysis.html)
 
-### [Using LLMs to create a website -\>](website.html) \[advanced\]
+### [Using LLMs to create a website -\>](website.html)
 
-### [Make a browser-based game -\>](browser_game.html) \[advanced\]
+### [Make a browser-based game -\>](browser_game.html)
