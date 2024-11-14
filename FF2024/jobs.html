@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>exercise_session_2</title>
+<title>Working with texts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,19 +20,53 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="exercise_session_2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/quarto.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/popper.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="exercise_session_2_files/libs/quarto-html/anchor.min.js"></script>
-<link href="exercise_session_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="exercise_session_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="exercise_session_2_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="exercise_session_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="exercise_session_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="text_files/libs/clipboard/clipboard.min.js"></script>
+<script src="text_files/libs/quarto-html/quarto.js"></script>
+<script src="text_files/libs/quarto-html/popper.min.js"></script>
+<script src="text_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="text_files/libs/quarto-html/anchor.min.js"></script>
+<link href="text_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="text_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="text_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="text_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="text_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -44,29 +78,24 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-
-<p><a href="index.html">Hands-on sessions</a> /</p>
-<section id="session-2" class="level2">
-<h2 class="anchored" data-anchor-id="session-2">Session 2</h2>
-<p>In this round of hands-on exercises you can choose various use cases/applications of LLMs to try out. We do not expect you to try out more than one of these in such a short time. Select one LLM use case that you think is most fun below.</p>
-<section id="working-with-texts" class="level3">
-  <h3 class="anchored" data-anchor-id="working-with-texts"><a href="jobs.html">Job announcements and job search -&gt;</a></h3>
-  </section>
-<section id="upload-and-chat-about-a-document--" class="level3">
-<h3 class="anchored" data-anchor-id="upload-and-chat-about-a-document--"><a href="document.html">Upload and chat about a document -&gt;</a></h3>
-</section>
-<section id="image-generation--" class="level3">
-<h3 class="anchored" data-anchor-id="image-generation--"><a href="images.html">Image generation -&gt;</a></h3>
-</section>
-<section id="llm-as-a-data-analysis-assistant---advanced" class="level3">
-<h3 class="anchored" data-anchor-id="llm-as-a-data-analysis-assistant---advanced"><a href="data_analysis.html">LLM as a data analysis assistant -&gt;</a> [advanced]</h3>
-</section>
-<section id="using-llms-to-create-a-website---advanced" class="level3">
-<h3 class="anchored" data-anchor-id="using-llms-to-create-a-website---advanced"><a href="website.html">Using LLMs to create a website -&gt;</a> [advanced]</h3>
-</section>
-<section id="make-a-browser-based-game---advanced" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-browser-based-game---advanced"><a href="browser_game.html">Make a browser-based game -&gt;</a> [advanced]</h3>
-</section>
+<p><a href="index.html">Hands-on sessions</a> / <a href="exercise_session_2.html">Hands-on session 2</a> /</p>
+<section id="basic-tasks-with-text-generation" class="level2">
+<h2 class="anchored" data-anchor-id="basic-tasks-with-text-generation">Job announcements and job search</h2>
+<p>Below are some examples of what you can use LLMs for.</p>
+<section id="general-questions-to-ask" class="level3">
+  <h3 class="anchored" data-anchor-id="general-questions-to-ask">Job announcements</h3>
+<p>One way in which LLMs are used often is for writing job announcements and cover letters. You can provide information about the type of person you are looking for and receive a suggestion for a job ad that will typically be pretty good.</p>
+<blockquote class="blockquote">Write a job ad for …[a bioinformatician with the following skills...]</blockquote>
+  <h3 class="anchored" data-anchor-id="general-questions-to-ask">Job applications</h3>
+<p>As a job applicant, you can copy-paste the job ad and your CV as well as additional information and ask for a cover letter.</p>
+<blockquote class="blockquote">Write cover letter for this job ad based on my CV and the following information [paste your CV] [paste additional info] [paste job ad]</blockquote>
+<p>If you think that a cover letter will play an important role in candidate selection, please note that you need to be careful about using LLMs for cover letters. Specifically, because many of the other job applicants will be using LLMs to write cover letters and will be sending a similar letter to yours (for the person reading all the cover letters it is easy to recognize text written by LLMs). So make sure to make it less generic if you think it is important.</p>
+<blockquote class="blockquote">
+  <p>☝️ <strong>TIP</strong>: Fun fact: there are now LLM-powered tools that allow to apply to many jobs without any effort, see for example this article: <a href="https://techcrunch.com/2024/10/10/a-reporter-used-ai-to-apply-to-2843-jobs">Someone claims to have used AI to apply to 2,843 jobs</a>.</p>
+  </blockquote>
+<h3 class="anchored" data-anchor-id="general-questions-to-ask">Job interviews</h3>
+<p>Another way to use an LLM is to help you prepare for an important meeting. For example, you can ask to generate potential job interview questions.</p>
+<blockquote class="blockquote">Ask me questions and help me prepare for an important interview.</blockquote>
 </section>
 
 </main>
